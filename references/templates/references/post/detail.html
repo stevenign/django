@@ -1,0 +1,16 @@
+{% extends 'references/base.html' %}
+{% load blog_tags %}
+
+{% block title %}
+    {{  post.title  }}
+{% endblock title %}
+
+{% block content %}
+   <h1>{{   post.titleRf  }}</h1>
+   <h2>{{ post.descriptionRf }}</h2>
+   <p class="date">
+       Published {{post.titleRf}} by {{post.authorRf}}
+   </p>
+   {{ post.body|markdown }}
+
+{% endblock content %}
